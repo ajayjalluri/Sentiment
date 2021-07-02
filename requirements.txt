@@ -1,5 +1,5 @@
 numpy==1.18.4
-streamlit==0.69.0
+streamlit== 0.83.0
 pandas==1.0.3
 plotly==4.14.3
 wordcloud==1.7.0
