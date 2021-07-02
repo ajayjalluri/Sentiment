@@ -197,7 +197,7 @@ def create_word_cloud(brand, sentiment):
 
         wordcloud = WordCloud(max_font_size=50,background_color='white', width=500, height=300).generate(word_cloud_collection)
         plt.figure(figsize=(10,10))
-        plt.imshow(wordcloud)
+        plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         plt.show()
         plt.savefig('WC.jpg')
