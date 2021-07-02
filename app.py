@@ -16,7 +16,6 @@ import warnings
 
 import pickle
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df1 = pd.read_csv('1st-part.csv')
 df2 = pd.read_csv('2nd-part.csv')
@@ -199,8 +198,9 @@ def create_word_cloud(brand, sentiment):
         plt.imshow(wordcloud)
         plt.axis("off")
         plt.show()
-        # plt.savefig('Plotly-World_Cloud.png')
-        st.pyplot()
+        plt.savefig('WC.jpg')
+        img= Image.open("WC.jpg")
+        return img
 
 if page == "Word cloud" :
 
@@ -216,9 +216,11 @@ if page == "Word cloud" :
 
     if submit_button:
         if s=="Positive" :
-            create_word_cloud(brand,1 )
+            img = create_word_cloud(brand,1 )
+            st.image(img)
         else :
-            create_word_cloud(brand,0 )
+            img = create_word_cloud(brand,0 )
+            st.image(img)
 
 
 if page == "Sentiment Analyser":
