@@ -195,8 +195,8 @@ def create_word_cloud(brand, sentiment):
             for words in tokens:
                 word_cloud_collection = word_cloud_collection + words + ' '
 
-        wordcloud = WordCloud(max_font_size=50,background_color='white', width=500, height=300).generate(word_cloud_collection)
-        plt.figure(figsize=(10,10))
+        wordcloud = WordCloud(max_font_size=50, width=500, height=300).generate(word_cloud_collection)
+        
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         plt.show()
