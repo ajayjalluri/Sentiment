@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 import re
 import nltk
 import warnings
-
+from PIL import Image
 import pickle
 
 
