@@ -17,6 +17,8 @@ from PIL import Image
 import pickle
 
 nltk.download('punkt')
+nltk.download('stopwords')
+
 df1 = pd.read_csv('1st-part.csv')
 df2 = pd.read_csv('2nd-part.csv')
 df3 = pd.read_csv('3rd-part.csv')
