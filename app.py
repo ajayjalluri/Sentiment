@@ -97,7 +97,7 @@ def cleanText(raw_text, remove_stopwords=False, stemming=False, split_text=False
     '''
     Convert a raw review to a cleaned review
     '''
-    text = BeautifulSoup(raw_text, 'lxml').get_text()  #remove html
+    text = BeautifulSoup(raw_text, "html.parser").get_text()  #remove html
     letters_only = re.sub("[^a-zA-Z]", " ", text)  # remove non-character
     words = letters_only.lower().split() # convert to lower case
 
