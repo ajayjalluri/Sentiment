@@ -173,7 +173,13 @@ if page == "Visualization" :
 
     st.plotly_chart(fig,use_container_width=20)
 
+    st.header("Polarity Distribution")
 
+    df3 =pd.DataFrame([["Positive",230674],["Neutral",26058],["Negative",77603]],columns= ["Polarity","Frequency"])
+
+    fig = px.bar(df3,x='Polarity',y = "Frequency",title = "Polarity Distribution")
+
+    st.plotly_chart(fig,use_container_width=20)
 
 
 
