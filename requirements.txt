@@ -7,3 +7,4 @@ wordcloud==1.7.0
 nltk==3.4.4
 seaborn==0.10.1
 matplotlib==3.2.1
+bs4==4.9.3
